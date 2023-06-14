@@ -121,7 +121,7 @@ copyButton.addEventListener("click", () => {
 // Add event listener for sharing on Twitter
 shareButton.addEventListener("click", () => {
   const generatedRumor = rumorText.textContent;
-  const tweetText = encodeURIComponent("Check out this transfer rumour: " + generatedRumor + " https://elljfb.github.io/random-transfer-generator/");
+  const tweetText = encodeURIComponent("Check out this transfer rumour I saw - " + generatedRumor);
   const tweetUrl = "https://twitter.com/intent/tweet?text=" + tweetText;
 
   window.open(tweetUrl, "_blank");
