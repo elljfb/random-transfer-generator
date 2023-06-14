@@ -97,7 +97,7 @@ function copyToClipboard(text) {
 }
 
 // Hide the button container initially
-buttonContainer.style.display = "none";
+//buttonContainer.style.display = "none";
 
 // Add event listener for generating a new rumor and showing buttons
 generateButton.addEventListener("click", function() {
