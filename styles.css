@@ -52,7 +52,7 @@ button:hover {
 }
 
 /* Responsive Styles */
-@media (min-width: 768px) {
+@media (min-width: 360px) {
   .container {
     padding: 40px;
   }
