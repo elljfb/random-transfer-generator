@@ -85,4 +85,9 @@ button:hover {
     font-size: 20px;
     padding: 16px 32px;
   }
+
+  #rumor-text {
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+  }
 }
