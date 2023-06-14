@@ -54,7 +54,7 @@ const interestedClubs = ["Manchester United", "FC Barcelona", "Real Madrid", "Ba
 "Portsmouth", "Leeds United", "Nottingham Forest", "Sheffield Wednesday", "Aston Villa",
 "CSKA Moscow", "Spartak Moscow", "Zenit Saint Petersburg", "Lokomotiv Moscow", "Dynamo Moscow",
 "Al-Hilal", "Al-Nassr", "Al-Ahli", "Al-Ittihad", "Al-Shabab"];
-const phrases = ["is rumored to be moving to", "linked with a move to", "attracts interest from"];
+const phrases = ["is rumoured to be moving to", "linked with a move to", "attracts interest from"];
 const transferFees = [];
 for (let i = 0; i < 50; i++) {
     const fee = Math.floor(Math.random() * 100) + 1; // Generate a random number between 1 and 100
@@ -74,7 +74,57 @@ function generateTransferRumor() {
 }
 
 // Event listener for the generate button
-document.getElementById("generate-button").addEventListener("click", function() {
+//document.getElementById("generate-button").addEventListener("click", function() {
+  //const rumor = generateTransferRumor();
+  //document.getElementById("rumor-text").textContent = rumor;
+//});
+
+// Get the rumor text element and buttons
+const rumorText = document.getElementById("rumor-text");
+const generateButton = document.getElementById("generate-button");
+const copyButton = document.getElementById("copy-button");
+const shareButton = document.getElementById("share-twitter");
+const buttonContainer = document.getElementById("button-container");
+
+// Function to copy the rumor text to the clipboard
+function copyToClipboard(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+}
+
+// Hide the button container initially
+buttonContainer.style.display = "none";
+
+// Add event listener for generating a new rumor and showing buttons
+generateButton.addEventListener("click", function() {
   const rumor = generateTransferRumor();
   document.getElementById("rumor-text").textContent = rumor;
+
+  // Display the rumor
+  rumorText.textContent = rumor;
+
+  // Show the button container
+  buttonContainer.style.display = "flex";
 });
+
+// Add event listener for copying the rumor
+copyButton.addEventListener("click", () => {
+  const generatedRumor = rumorText.textContent;
+  copyToClipboard(generatedRumor);
+  //alert("Rumour copied to clipboard!");
+});
+
+// Add event listener for sharing on Twitter
+shareButton.addEventListener("click", () => {
+  const generatedRumor = rumorText.textContent;
+  const tweetText = encodeURIComponent("Check out this transfer rumour: " + generatedRumor + " https://elljfb.github.io/random-transfer-generator/");
+  const tweetUrl = "https://twitter.com/intent/tweet?text=" + tweetText;
+
+  window.open(tweetUrl, "_blank");
+});
+
+

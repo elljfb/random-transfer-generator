@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>Transfer Rumour Generator | Generate Random Football Transfer Rumours</title>
   <meta name="description" content="Generate random football transfer rumours with our Transfer Rumour Generator. Get fictional transfer stories involving top players and clubs. Have fun and share the rumours!">
   <meta name="keywords" content="transfer rumour generator, football transfer rumours, random transfer stories, football rumours, transfer gossip, player transfer speculations, create your own transfer rumour">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QX3M8MH1E4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QX3M8MH1E4');
+</script>
 </head>
 <body>
   <h1>Transfer Rumor Generator</h1>
   <div id="rumor-container">
-    <p id="rumor-text">Click the button to generate a transfer rumor.</p>
-    <button id="generate-button">Generate</button>
+    <p id="rumor-text">Click the button to generate a transfer rumour.</p>
+    <div id="button-container" class="hidden">
+      <button id="copy-button">Copy Rumor</button>
+      <button id="share-twitter">Share on Twitter</button>
+    </div>
+    <button id="generate-button" style="margin-top: 10px;">Generate</button>
   </div>
 
   <script src="script.js"></script>
