@@ -70,7 +70,11 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 300px;
+}
+
+#banner img {
+  max-height: 300px;
+  max-width: 100%;
 }
 
 
