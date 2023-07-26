@@ -127,4 +127,8 @@ shareButton.addEventListener("click", () => {
   window.open(tweetUrl, "_blank");
 });
 
+function toggleMenu() {
+  var menuItems = document.getElementById("menuItems");
+  menuItems.classList.toggle("active");
+}
 
