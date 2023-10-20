@@ -124,6 +124,11 @@ button:hover {
   padding: 0 20px;
 }
 
+.navbar-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .logo {
   font-size: 20px;
   font-weight: bold;
