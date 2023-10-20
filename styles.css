@@ -126,7 +126,7 @@ button:hover {
 
 .navbar-container a {
   text-decoration: none;
-  color: #fff;
+  color: #fff !important;
 }
 
 .logo {
