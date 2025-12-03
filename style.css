@@ -63,6 +63,34 @@ body {
     text-align: center;
   }
 
+  .seo-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1e2538;
+    border-radius: 8px;
+  }
+
+  .seo-content h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .seo-content h3 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  .seo-content p {
+    text-align: left;
+    color: #b8bfd0;
+    line-height: 1.8;
+  }
+
   .related-content, .more-from-us {
     max-width: 800px;
     margin: 40px auto 20px;

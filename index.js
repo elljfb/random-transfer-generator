@@ -1,37 +1,34 @@
-const playerNames = ["Lionel Messi", "Cristiano Ronaldo", "Neymar Jr.", "Kylian Mbappé", "Robert Lewandowski",
-    "Kevin De Bruyne", "Mohamed Salah", "Harry Kane", "Virgil van Dijk", "Sergio Ramos",
-    "Manuel Neuer", "Eden Hazard", "Luka Modrić", "Sadio Mané", "Karim Benzema",
-    "Raheem Sterling", "N'Golo Kanté", "Alisson Becker", "Thiago Silva", "Toni Kroos",
-    "Bruno Fernandes", "Joshua Kimmich", "Pierre-Emerick Aubameyang", "Thomas Müller", "Romelu Lukaku",
-    "Paulo Dybala", "Marco Reus", "Sergio Agüero", "Raphael Varane", "Marc-André ter Stegen",
-    "Erling Haaland", "Antoine Griezmann", "Aymeric Laporte", "Heung-Min Son", "Jan Oblak",
-    "Trent Alexander-Arnold", "Jamie Vardy", "Thiago Alcântara", "N'Golo Kanté", "Gianluigi Donnarumma",
-    "Andrew Robertson", "Virgil van Dijk", "Ciro Immobile", "Marquinhos", "Jadon Sancho",
-    "Kalidou Koulibaly", "Serge Gnabry", "Dries Mertens", "Matthijs de Ligt", "Paul Pogba",
-    "Luis Suárez", "Hakim Ziyech", "Kai Havertz", "Angel Di Maria", "Jorginho",
-    "Frenkie de Jong", "David Silva", "Keylor Navas", "Sergio Busquets", "Gareth Bale",
-    "Karim Benzema", "Christian Pulisic", "Lautaro Martínez", "Rodri", "Jordi Alba",
-    "Gerard Piqué", "Dani Carvajal", "Lucas Moura", "Federico Valverde", "Timo Werner",
-    "Ederson", "Sergio Agüero", "César Azpilicueta", "Alex Telles", "João Cancelo",
-    "Jorginho", "João Félix", "Diego Godín", "Allan", "Kalvin Phillips",
-    "Sadio Mané", "Leon Goretzka", "Héctor Bellerín", "Wojciech Szczęsny", "Casemiro",
-    "Kingsley Coman", "Kieran Trippier", "Romelu Lukaku", "Federico Chiesa", "Sergej Milinković-Savić",
-    "Ángel Correa", "Mason Mount", "Hirving Lozano", "Cristian Romero", "Duván Zapata",
-    "Thibaut Courtois", "Pedro", "Iñaki Williams", "Riyad Mahrez", "Thorgan Hazard",
-    "Memphis Depay", "Bruno Fernandes", "Nabil Fekir", "Niklas Süle", "Achraf Hakimi",
-    "Lucas Digne", "Ruben Dias", "Alessandro Florenzi", "Jude Bellingham", "Ibrahim Sangaré",
-    "Dejan Kulusevski", "Eduardo Camavinga", "Matteo Guendouzi", "Tanguy Ndombele", "Youri Tielemans",
-    "Bukayo Saka", "Dani Olmo", "Saul Niguez", "Nicolò Barella", "Giovanni Reyna",
-    "Gianluigi Donnarumma", "Adama Traoré", "Nathan Aké", "Dominik Szoboszlai", "Pau Torres",
-    "Aaron Wan-Bissaka", "Reece James", "Ezri Konsa", "Ryan Gravenberch", "Sander Berge",
-    "Alexander Isak", "Edmond Tapsoba", "Boubacar Kamara", "Takehiro Tomiyasu", "Manuel Locatelli",
-    "Leon Bailey", "Maxence Lacroix", "Matheus Cunha", "Donyell Malen", "Zeki Çelik",
-    "Jonathan David", "Daniel James", "Ryan Sessegnon", "Odsonne Édouard", "Daniele Rugani",
-    "Sergiño Dest", "Nuno Mendes", "Erling Håland", "Pedri", "Rúben Neves",
-    "Eduardo Camavinga", "Sandro Tonali", "Gianluigi Buffon", "Paulo Gazzaniga", "Joe Hart",
-    "Maarten Stekelenburg", "David de Gea", "Jasper Cillessen", "Rui Patrício", "Wojciech Szczęsny",
-    "Gianluigi Donnarumma", "Samir Handanović", "Jan Oblak", "Alphonse Areola", "Marc-André ter Stegen",
-    "Keylor Navas", "Ederson", "Kasper Schmeichel", "Bernd Leno", "Hugo Lloris"];
+const playerNames = [
+    // Premier League Stars
+    "Erling Haaland", "Mohamed Salah", "Bukayo Saka", "Phil Foden", "Cole Palmer",
+    "Bruno Fernandes", "Heung-Min Son", "Martin Ødegaard", "Kevin De Bruyne", "Alexander Isak",
+    "Ollie Watkins", "Darwin Núñez", "Declan Rice", "Rodri", "William Saliba",
+    "Virgil van Dijk", "Trent Alexander-Arnold", "Gabriel Magalhães", "Reece James", "Kyle Walker",
+    
+    // La Liga Stars  
+    "Vinícius Júnior", "Jude Bellingham", "Robert Lewandowski", "Lamine Yamal", "Pedri",
+    "Kylian Mbappé", "Rodrygo", "João Félix", "Antoine Griezmann", "Frenkie de Jong",
+    "Raphinha", "Nico Williams", "Federico Valverde", "Eduardo Camavinga", "Aurélien Tchouaméni",
+    
+    // Serie A Stars
+    "Victor Osimhen", "Rafael Leão", "Lautaro Martínez", "Khvicha Kvaratskhelia", "Dusan Vlahović",
+    "Marcus Thuram", "Paulo Dybala", "Niccolò Barella", "Alessandro Bastoni", "Mike Maignan",
+    
+    // Bundesliga Stars
+    "Harry Kane", "Jamal Musiala", "Florian Wirtz", "Victor Boniface", "Serge Gnabry",
+    "Leroy Sané", "Joshua Kimmich", "Alphonso Davies", "Karim Adeyemi", "Gregor Kobel",
+    
+    // Ligue 1 Stars
+    "Randal Kolo Muani", "Bradley Barcola", "Ousmane Dembélé", "Achraf Hakimi", "Marquinhos",
+    "Gianluigi Donnarumma", "Gonçalo Ramos", "Warren Zaïre-Emery", "Alexandre Lacazette", "Nemanja Matić",
+    
+    // Other Top Players
+    "Cristiano Ronaldo", "Neymar Jr.", "Lionel Messi", "Karim Benzema", "N'Golo Kanté",
+    "Luis Díaz", "Cody Gakpo", "Dominik Szoboszlai", "Alexis Mac Allister", "Moisés Caicedo",
+    "Julián Álvarez", "Mateo Kovačić", "Enzo Fernández", "Mykhailo Mudryk", "Pedro Neto",
+    "Jarrod Bowen", "James Maddison", "Dejan Kulusevski", "Brennan Johnson", "Anthony Gordon",
+    "Eberechi Eze", "Michael Olise", "Matheus Cunha", "Hwang Hee-chan", "Ivan Toney"
+];
     const interestedClubs = ["Manchester United", "FC Barcelona", "Real Madrid", "Bayern Munich", "Liverpool",
     "Paris Saint-Germain", "Chelsea", "Borussia Dortmund", "Juventus", "Tottenham Hotspur",
     "Manchester City", "Inter Milan", "Atletico Madrid", "Arsenal", "AC Milan",
@@ -53,8 +50,41 @@ const playerNames = ["Lionel Messi", "Cristiano Ronaldo", "Neymar Jr.", "Kylian 
     "Portsmouth", "Leeds United", "Nottingham Forest", "Sheffield Wednesday", "Aston Villa",
     "CSKA Moscow", "Spartak Moscow", "Zenit Saint Petersburg", "Lokomotiv Moscow", "Dynamo Moscow",
     "Al-Hilal", "Al-Nassr", "Al-Ahli", "Al-Ittihad", "Al-Shabab"];
-    const phrases = ["is rumoured to be moving to", "linked with a move to", "attracts interest from"];
-    const transferFees = [];
+    
+const phrases = [
+    "is rumoured to be moving to",
+    "linked with a move to",
+    "attracts interest from",
+    "in advanced talks with",
+    "set to join",
+    "could be heading to",
+    "on the verge of signing for",
+    "reportedly close to joining",
+    "has agreed personal terms with",
+    "being monitored by",
+    "subject of a bid from",
+    "wanted by",
+    "eyed by",
+    "a target for",
+    "pursued by",
+    "edging closer to",
+    "in negotiations with",
+    "expected to complete a move to",
+    "undergone a medical at",
+    "spotted at training ground of"
+];
+
+const sources = [
+    "according to Sky Sports",
+    "reports suggest",
+    "sources claim",
+    "insiders reveal",
+    "as per reliable sources",
+    "multiple outlets report",
+    "The Athletic understands"
+];
+
+const transferFees = [];
     for (let i = 0; i < 50; i++) {
         const fee = Math.floor(Math.random() * 100) + 1; // Generate a random number between 1 and 100
         const formattedFee = `£${fee}M`; // Format the fee with the currency symbol and "M" for million
@@ -67,8 +97,9 @@ const playerNames = ["Lionel Messi", "Cristiano Ronaldo", "Neymar Jr.", "Kylian 
       const randomClub = interestedClubs[Math.floor(Math.random() * interestedClubs.length)];
       const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
       const randomTransferFee = transferFees[Math.floor(Math.random() * transferFees.length)];
+      const randomSource = sources[Math.floor(Math.random() * sources.length)];
     
-      const rumor = `${randomPlayerName} ${randomPhrase} ${randomClub} for ${randomTransferFee}`;
+      const rumor = `${randomPlayerName} ${randomPhrase} ${randomClub} for ${randomTransferFee}, ${randomSource}`;
       return rumor;
     }
     
@@ -118,10 +149,10 @@ const playerNames = ["Lionel Messi", "Cristiano Ronaldo", "Neymar Jr.", "Kylian 
     });
     
     // Add event listener for sharing on Twitter
-    shareButton.addEventListener("click", () => {
+    shareButton.addEventListener('click', () => {
       const generatedRumor = rumorText.textContent;
-      const tweetText = encodeURIComponent("Check out this transfer rumour I saw - " + generatedRumor);
-      const tweetUrl = "https://twitter.com/intent/tweet?text=" + tweetText;
+      const tweetText = encodeURIComponent('🚨 BREAKING: ' + generatedRumor + '\n\nGenerate your own fake transfer rumours at transferrumourgenerator.online');
+      const tweetUrl = 'https://twitter.com/intent/tweet?text=' + tweetText;
     
-      window.open(tweetUrl, "_blank");
+      window.open(tweetUrl, '_blank');
     });
