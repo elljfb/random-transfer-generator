@@ -241,6 +241,34 @@ body {
   #copy-button:hover, #share-twitter:hover {
     background-color: #3d4a63;
   }
+
+  /* Footer Styles */
+  footer {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 20px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #2d384d;
+  }
+
+  footer p {
+    margin: 0;
+    color: #b8bfd0;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: #1e70e8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  footer a:hover {
+    color: #3e90ff;
+    text-decoration: underline;
+  }
   
   @media (max-width: 600px) {
     h1 {
@@ -259,5 +287,10 @@ body {
     
     #button-container {
       flex-direction: column;
+    }
+
+    footer {
+      margin: 30px auto 15px;
+      padding: 15px;
     }
   }
